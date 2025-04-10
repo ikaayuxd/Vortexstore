@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
@@ -7,235 +8,297 @@
         body {
             font-family: 'Roboto', sans-serif;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-white text-black">
     <div class="max-w-screen-lg mx-auto p-4 border-2 border-black">
         <div class="flex justify-between items-center mb-4">
-            <div class="text-2xl font-bold">
+            <div class="text-3xl font-bold">
                 COURSES STORE
             </div>
-            <div class="text-xl font-bold">
-                #VORTEX
+            <div class="text-2xl font-bold">
+                #BY-VORTEX
                 <i class="fas fa-flag"></i>
             </div>
         </div>
         <div class="text-center mb-4">
             <div class="border-2 border-black inline-block p-4">
-                <div class="text-3xl font-bold">
-                    PREMIUM COURSE 
+                <div class="text-4xl font-bold">
+                    PREMIUM COURSES
                 </div>
-                <div class="text-lg">
-                    #BY-VORTEX
-                </div>
-            </div>
-        </div>
-        <div class="text-center mb-4">
-            <div class="text-lg">
-                • Web Dev • Tg Bots Dev • Coder • Editor •
             </div>
         </div>
         <div class="mb-4 border-2 border-black p-2">
-            <div class="text-xl font-bold mb-2">
-                Methods of...
+            <div class="text-2xl font-bold mb-2">
+                Courses of...
             </div>
             <div class="overflow-x-auto whitespace-nowrap">
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal1')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 1
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal2')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 2
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal3')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 3
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal4')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 4
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal5')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 5
                     </div>
                 </div>
             </div>
         </div>
         <div class="mb-4 border-2 border-black p-2">
-            <div class="text-xl font-bold mb-2">
-                Methods of...
+            <div class="text-2xl font-bold mb-2">
+                Additional Courses Block 1
             </div>
             <div class="overflow-x-auto whitespace-nowrap">
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal6')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 6
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal7')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 7
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal8')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 8
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal9')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 9
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal10')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 10
                     </div>
                 </div>
             </div>
         </div>
         <div class="mb-4 border-2 border-black p-2">
-            <div class="text-xl font-bold mb-2">
-                Methods of...
+            <div class="text-2xl font-bold mb-2">
+                Additional Courses Block 2
             </div>
             <div class="overflow-x-auto whitespace-nowrap">
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal11')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 11
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal12')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 12
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal13')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 13
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal14')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 14
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
+                <div class="inline-block relative mb-4 w-80 sm:w-96">
+                    <img alt="Course Image" class="w-full cursor-pointer" height="200" onclick="openModal('modal15')" src="https://placehold.co/600x200/000000/FFFFFF/png" width="600"/>
+                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-2xl font-bold p-2">
+                        ▪ COURSE NAME 15
                     </div>
                 </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
-                <div class="inline-block relative mb-4 w-64 sm:w-80 md:w-96">
-                    <img alt="A warning sign with the word 'MALWARE' in bright pink neon lights" class="w-full" src="https://placehold.co/600x200/000000/FFFFFF/png"/>
-                    <div class="absolute bottom-0 left-0 bg-gray-800 bg-opacity-50 text-teal-400 text-xl font-bold p-2">
-                        ▪ METHOD NAME....
-                    </div>
-                </div>
+            </div>
+        </div>
+        <!-- Modal Structure for Additional Courses -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Course Details 1</h2>
+                <p>Description of Course 1 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Course Details 2</h2>
+                <p>Description of Course 2 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>Course Details 3</h2>
+                <p>Description of Course 3 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h2>Course Details 4</h2>
+                <p>Description of Course 4 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal5')">&times;</span>
+                <h2>Course Details 5</h2>
+                <p>Description of Course 5 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal6')">&times;</span>
+                <h2>Course Details 6</h2>
+                <p>Description of Course 6 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal7" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal7')">&times;</span>
+                <h2>Course Details 7</h2>
+                <p>Description of Course 7 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal8" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal8')">&times;</span>
+                <h2>Course Details 8</h2>
+                <p>Description of Course 8 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal9" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal9')">&times;</span>
+                <h2>Course Details 9</h2>
+                <p>Description of Course 9 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal10" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal10')">&times;</span>
+                <h2>Course Details 10</h2>
+                <p>Description of Course 10 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal11" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal11')">&times;</span>
+                <h2>Course Details 11</h2>
+                <p>Description of Course 11 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal12" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal12')">&times;</span>
+                <h2>Course Details 12</h2>
+                <p>Description of Course 12 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal13" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal13')">&times;</span>
+                <h2>Course Details 13</h2>
+                <p>Description of Course 13 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal14" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal14')">&times;</span>
+                <h2>Course Details 14</h2>
+                <p>Description of Course 14 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
+            </div>
+        </div>
+        <div id="modal15" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal15')">&times;</span>
+                <h2>Course Details 15</h2>
+                <p>Description of Course 15 goes here.</p>
+                <a href="https://t.me/JAEGER108" class="bg-blue-500 text-white px-4 py-2 rounded">GET THIS COURSE</a>
             </div>
         </div>
     </div>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
 </body>
 </html>
